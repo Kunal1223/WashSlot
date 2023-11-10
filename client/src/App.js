@@ -6,7 +6,7 @@ import Login from './Components/Login';
 import About from './Components/About';
 import Hostel from './Components/Hostel';
 import Navbar from './Components/Navbar';
-// import Footer from './Components/Footer';
+import SouprnikaBooking from './SubComponents/SouprnikaBooking';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
           <Route path='/hostel' element={<Hostel />} />
-          {/* <Route path='/footer' element={<Home />} /> */}
+          <Route path='/soupbooking' element={<SouprnikaBooking />} />
           {/* <Route path='/' element={<Home />} /> */}
         </Routes>
         {/* <Footer /> */}

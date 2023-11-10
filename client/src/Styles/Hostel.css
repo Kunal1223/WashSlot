@@ -1,0 +1,82 @@
+.Hostel-container{
+    margin-top: 4%;
+}
+
+.nmit-hostel {
+    font-size: 22px;
+    text-align: center;
+    color: #FF5252;
+}
+
+.home-hr{
+    width: 260px;
+    height: 2px;
+    margin-left: 40%;
+    background-color: #FF5252;
+    box-shadow: 10px 10px 100px #FF5252;
+}
+
+.Hostel-container h3{
+    margin-top: 2%;
+    color: #FF5252;
+    margin-left: 14px;
+}
+
+.home-hr1{
+    width: 160px;
+    height: 1px;
+    margin-left: 2%;
+    background-color: #FF5252;
+    box-shadow: 10px 10px 100px #FF5252;
+}
+
+
+/* ##################################### HostelCart ################################ */
+
+.hostelcart{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hostelcart1{
+    margin: 8% 0%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.hostelcart-navlink{
+    text-decoration: none;
+}
+
+.hostelcart-box{
+    height: 280px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 5px 5px  10px #9a9999;
+    background-color: #f5efed;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hostelcart-box:hover {
+    transform: translateY(-8px);
+}
+
+.hostelcart-box h2{
+    color: #FF5252;
+    margin-top: 4%;
+    font-size: 20px;
+}
+
+.hostelcart-box h6{
+    color: rgb(133, 130, 130);
+}
+
+.cart-pic{
+    width: 100%;
+    height: 78%;
+}
+
+
+/* ######################### Souparnika Booking ############################## */
