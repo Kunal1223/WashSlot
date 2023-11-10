@@ -80,3 +80,71 @@
 
 
 /* ######################### Souparnika Booking ############################## */
+
+
+.machine-box{
+    margin-top: 4%;
+    text-align: center;
+    align-items: center;
+}
+
+.machine-box h1{
+    color: #FF5252;
+}
+
+.machine-hr{
+    width: 240px;
+    margin-left: 41%;
+    height: 2px;
+    background-color: #FF5252;
+}
+
+.machine-text{
+    display: flex;
+    justify-content: center;
+}
+
+.machine-text h1{
+    margin-top: -38px;
+    margin-left: 164px;
+    margin-right: 164px;
+}
+
+.slot{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.slot-booking{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 4%;
+}
+
+.slot1-booking{
+    margin-top: 60px;
+    height: 60vh;
+    align-items: center;
+    text-align: center;
+}
+
+.slot h4{
+    color: #FF5252;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.slot-btn{
+    margin-top: 4px;
+    width: 200px;
+    padding: 10px 22px;
+    background-color: rgb(128, 244, 100);
+    border: 0px solid;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
