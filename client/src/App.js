@@ -19,7 +19,9 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
           <Route path='/hostel' element={<Hostel />} />
-          <Route path='/soupbooking' element={<MachineBooking userId1={"souparnikaM1"} userId2={"souparnikaM2"}  />} />
+          <Route path='/soupbooking' element={<MachineBooking userId1={"souparnikaM1"} userId2={"souparnikaM2"}  colorapi={"souparnikaColors"} dataapi={"souparnikabookings"} />} />
+          <Route path='/nandini' element={<MachineBooking userId1={"nandiniM1"} userId2={"nandiniM2"}  />} />
+
           
         </Routes>
         {/* <Footer /> */}

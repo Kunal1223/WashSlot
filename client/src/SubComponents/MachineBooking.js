@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
-const MachineBooking = ({userId1 , userId2}) => {
+const MachineBooking = ({userId1 , userId2 , colorapi , dataapi}) => {
 
   const [slotColorsM1, setSlotColorsM1] = useState({});
   const [slotColorsM2, setSlotColorsM2] = useState({});
 
   const userIdM1 = userId1;
   const userIdM2 = userId2;
-
+ 
   //for the machine M1
   useEffect(() => {
-    fetch(`http://localhost:5000/api/slotColors?userId=${userIdM1}`)
+    fetch(`http://localhost:5000/api/${colorapi}?userId=${userIdM1}`)
       .then((response) => response.json())
       .then((data) => {
         setSlotColorsM1(data);
@@ -18,12 +18,12 @@ const MachineBooking = ({userId1 , userId2}) => {
       .catch((error) => {
         console.error('Error fetching slot colors:', error);
       });
-  }, [userIdM1]);
+  }, []);
 
 
   //For the machine M2
   useEffect(() => {
-    fetch(`http://localhost:5000/api/slotColors?userId=${userIdM2}`)
+    fetch(`http://localhost:5000/api/${colorapi}?userId=${userIdM2}`)
       .then((response) => response.json())
       .then((data) => {
         setSlotColorsM2(data);
@@ -31,11 +31,11 @@ const MachineBooking = ({userId1 , userId2}) => {
       .catch((error) => {
         console.error('Error fetching slot colors:', error);
       });
-  }, [userIdM2]);
+  }, []);
 
 
   const openBookingModal = (slotTime) => {
-    fetch('http://localhost:5000/api/bookings', {
+    fetch(`http://localhost:5000/api/${dataapi}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const MachineBooking = ({userId1 , userId2}) => {
 
   //For the Machine 2
   const openBookingModal1 = (slotTime) => {
-    fetch('http://localhost:5000/api/bookings', {
+    fetch(`http://localhost:5000/api/${dataapi}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

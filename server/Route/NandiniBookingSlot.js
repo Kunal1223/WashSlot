@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../Models/Booking');
+const User = require('../Models/NandiniBooking');
 
 
-router.get('/slotColors', async (req, res) => {
+router.get('/nandinislotColors', async (req, res) => {
     const { userId } = req.query;
 
     try {
@@ -23,7 +23,7 @@ router.get('/slotColors', async (req, res) => {
     }
 });
 
-router.post('/bookings', async (req, res) => {
+router.post('/nandinibookings', async (req, res) => {
     const { slotTime, userId } = req.body;
 
     try {
@@ -53,8 +53,5 @@ router.post('/bookings', async (req, res) => {
         return res.status(500).json({ message: 'Internal Server Error' });
     }
 });
-
-
-
 
 module.exports = router;
