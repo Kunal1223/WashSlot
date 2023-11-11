@@ -8,7 +8,7 @@ const MachineBooking = ({userId1 , userId2 , colorapi , dataapi}) => {
   const userIdM1 = userId1;
   const userIdM2 = userId2;
  
-  //for the machine M1
+  //Import the color from the database for Machine M1
   useEffect(() => {
     fetch(`http://localhost:5000/api/${colorapi}?userId=${userIdM1}`)
       .then((response) => response.json())
@@ -21,7 +21,7 @@ const MachineBooking = ({userId1 , userId2 , colorapi , dataapi}) => {
   }, []);
 
 
-  //For the machine M2
+  //Import the color from the database for Machine M2
   useEffect(() => {
     fetch(`http://localhost:5000/api/${colorapi}?userId=${userIdM2}`)
       .then((response) => response.json())
@@ -33,7 +33,7 @@ const MachineBooking = ({userId1 , userId2 , colorapi , dataapi}) => {
       });
   }, []);
 
-
+  // Fetch the data form the Database fro Machine M1
   const openBookingModal = (slotTime) => {
     fetch(`http://localhost:5000/api/${dataapi}`, {
       method: 'POST',
@@ -56,7 +56,7 @@ const MachineBooking = ({userId1 , userId2 , colorapi , dataapi}) => {
       });
   };
 
-  //For the Machine 2
+  //Fetch the data form the Database for Machine M2
   const openBookingModal1 = (slotTime) => {
     fetch(`http://localhost:5000/api/${dataapi}`, {
       method: 'POST',
@@ -264,7 +264,7 @@ const MachineBooking = ({userId1 , userId2 , colorapi , dataapi}) => {
               style={slotColorsM2['07:31 PM - 09:00 PM'] || {}}
             >
               07:30 PM - 09:00 PM
-            </button>
+            </button> 
             <button
               className="slot-btn"
               onClick={() => openBookingModal1('09:01 PM - 10:30 PM')}

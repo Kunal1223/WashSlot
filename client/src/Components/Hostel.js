@@ -13,7 +13,7 @@ const Hostel = () => {
         </div>
 
         <h3>Choose Your Hostel:</h3>
-        <hr className="home-hr1" />
+        <hr className="home-hr1" /> 
       </div>
 
       <div className="hostelcart">

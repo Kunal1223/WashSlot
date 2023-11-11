@@ -8,4 +8,4 @@ const BookingSchema = new mongoose.Schema({
 });
 
 const BookingModel = mongoose.model('nandini', BookingSchema);
-module.exports = BookingModel;
+module.exports = BookingModel; 

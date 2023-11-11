@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api', require('./Route/SouparnikaBookingSlot'));
+app.use('/api' , require('./Route/NandiniBookingSlot'));
 
 require('./DataBase/db');
 const PORT1 = process.env.PORT;

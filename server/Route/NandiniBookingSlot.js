@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../Models/NandiniBooking');
+const User = require('../Models/NandiniBooking'); 
 
 
 router.get('/nandinislotColors', async (req, res) => {
