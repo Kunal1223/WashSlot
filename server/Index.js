@@ -1,20 +1,22 @@
 const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' });
+
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
 const app = express();
 
-dotenv.config({path : './config.env'});
 app.use(express.json());
 app.use(cors());
 
-app.get('/' , (req , res) =>{
-    res.send("This is home page for me");
+app.use('/api', require('./Route/BookingSlot'));
+
+require('./DataBase/db');
+const PORT1 = process.env.PORT;
+
+app.get('/', (req, res) => {
+    res.send("This is the home page for me");
 });
 
-require('./DataBase/db')
-
-PORT1 = process.env.PORT;
-
-app.listen(PORT1 , (req , res) => {
-    console.log(`Listing on ${PORT1}`);
-})
+app.listen(PORT1, () => {
+    console.log(`Listening on ${PORT1}`);
+});
