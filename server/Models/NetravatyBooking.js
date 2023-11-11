@@ -7,5 +7,5 @@ const BookingSchema = new mongoose.Schema({
   color:{type: String , default: 'green'},  
 });
 
-const BookingModel = mongoose.model('nandini', BookingSchema);
+const BookingModel = mongoose.model('netravaty', BookingSchema);
 module.exports = BookingModel;  

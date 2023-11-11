@@ -5,7 +5,7 @@ const BookingSchema = new mongoose.Schema({
   isBooked: { type: Boolean, default: false },
   userId: {type: String,default: null},
   color:{type: String , default: 'green'},  
-});
-
-const BookingModel = mongoose.model('nandini', BookingSchema);
-module.exports = BookingModel;  
+}); 
+ 
+const BookingModel = mongoose.model('shambhavi', BookingSchema);
+module.exports = BookingModel; 

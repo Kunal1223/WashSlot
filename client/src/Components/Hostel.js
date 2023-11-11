@@ -13,7 +13,7 @@ const Hostel = () => {
         </div>
 
         <h3>Choose Your Hostel:</h3>
-        <hr className="home-hr1" /> 
+        <hr className="home-hr1" />
       </div>
 
       <div className="hostelcart">
@@ -21,17 +21,20 @@ const Hostel = () => {
           <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Souparnika"} cartdicrp={"First year hostel"} /></NavLink>
 
         <NavLink to={'/nandini'} className='hostelcart-navlink'>
-          <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"} cartdicrp={"First year hostel"} /> </NavLink>
+          <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"} cartdicrp={"Boy's Senior hostel"} /> </NavLink>
 
-        <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"} cartdicrp={"First year hostel"} />
+        <NavLink to={'/shambhavi'} className='hostelcart-navlink'>
+          <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Shambhavi"} cartdicrp={"2nd Boy's Senior hostel"} /></NavLink>
       </div>
 
       <div className="hostelcart1">
-        <NavLink to={'/soupbooking'} className='hostelcart-navlink'><HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"} cartdicrp={"First year hostel"} /> </NavLink>
+        <NavLink to={'/kavery'} className='hostelcart-navlink'><HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Kavery"} cartdicrp={"Closest from Mess ( Boy's Hostel )"} /> </NavLink>
 
-        <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"} cartdicrp={"First year hostel"} />
+        <NavLink to={'/kumardhara'} className='hostelcart-navlink'>
+        <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"KumarDhara"} cartdicrp={"Girl's hostel"} /></NavLink>
 
-        <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"} cartdicrp={"First year hostel"} />
+        <NavLink to={'/netravaty'} className='hostelcart-navlink'>
+        <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Netravaty"} cartdicrp={"Girl's hostel"} /></NavLink>
       </div>
     </>
   )
