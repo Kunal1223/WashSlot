@@ -13,18 +13,22 @@ const Hostel = () => {
           </div>
 
           <h3>Choose Your Hostel:</h3>
-          <hr className="home-hr1" />
+          <hr className="home-hr1" /> 
         </div>
 
         <div className="hostelcart">
-          <NavLink to={'/soupbooking'} className='hostelcart-navlink'><HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"}  cartdicrp={"First year hostel"}/> </NavLink>
+          <NavLink to={'/soupbooking'} className='hostelcart-navlink'><HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Souparnika"}  cartdicrp={"First year hostel"} /></NavLink> 
+
           <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"}  cartdicrp={"First year hostel"}/> 
+
           <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"}  cartdicrp={"First year hostel"}/> 
         </div>
 
         <div className="hostelcart1">
           <NavLink to={'/soupbooking'} className='hostelcart-navlink'><HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"}  cartdicrp={"First year hostel"}/> </NavLink>
+
           <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"}  cartdicrp={"First year hostel"}/> 
+
           <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Nandini"}  cartdicrp={"First year hostel"}/> 
         </div>
     </>

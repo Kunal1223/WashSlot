@@ -6,7 +6,7 @@ import Login from './Components/Login';
 import About from './Components/About';
 import Hostel from './Components/Hostel';
 import Navbar from './Components/Navbar';
-import SouprnikaBooking from './SubComponents/SouprnikaBooking';
+import MachineBooking from './SubComponents/MachineBooking';
 
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
           <Route path='/hostel' element={<Hostel />} />
-          <Route path='/soupbooking' element={<SouprnikaBooking />} />
-          {/* <Route path='/' element={<Home />} /> */}
+          <Route path='/soupbooking' element={<MachineBooking userId1={"souparnikaM1"} userId2={"souparnikaM2"}  />} />
+          
         </Routes>
         {/* <Footer /> */}
       </BrowserRouter>

@@ -3,7 +3,7 @@ import '../Styles/Hostel.css'
 
 const HostelCart = ({cartimg , cartname , cartdicrp}) => {
   return (
-    <>
+    <> 
         <div className="hostelcart-container">
             <div className="hostelcart-box">
                 <img src={cartimg} alt="cartimg" className='cart-pic' />
