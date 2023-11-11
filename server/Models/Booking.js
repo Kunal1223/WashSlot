@@ -1,15 +1,9 @@
 const mongoose = require('mongoose');
 
-const bookingSchema = new mongoose.Schema({
-  machineType: {
-    type: String,
-    required: true,
-  },
-  slotTime: {
-    type: String,
-    required: true,
-  },
+const BookingSchema = new mongoose.Schema({
+  slotTime: { type: String, required: true, unique: true },
+  isBooked: { type: Boolean, default: false },
 });
 
-const Booking = mongoose.model('Booking', bookingSchema);
-module.exports = Booking;
+const BookingModel = mongoose.model('Booking', BookingSchema);
+module.exports = BookingModel;

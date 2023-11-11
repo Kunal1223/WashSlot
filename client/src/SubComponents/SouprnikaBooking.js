@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const SouprnikaBooking = () => {
+const SouprnikaBooking = () => { 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
