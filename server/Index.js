@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use('/api' , require('./Route/CreateUs'))
 app.use('/api', require('./Route/SouparnikaBookingSlot'));
 app.use('/api' , require('./Route/NandiniBookingSlot'));
 app.use('/api' , require('./Route/ShambhaviBookingSlot'));
