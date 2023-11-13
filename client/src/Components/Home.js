@@ -4,7 +4,7 @@ import animation from '../assets/book.json'
 import Lootie from 'lottie-react'
 
 const Home = () => { 
-  return (
+  return ( 
     <>
         <div className="home-container">
           <div className="home-small-container">

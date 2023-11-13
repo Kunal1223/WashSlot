@@ -4,3 +4,36 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
+.wait{
+  margin-top: 8%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wait-content{
+  margin-top: 4%;
+  font-size: 20px;
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+  color:#FF5252;
+}
+
+.wait-content h1{
+  margin-bottom: 30px;
+}
+
+.wait-login{
+  text-decoration: none;
+  text-align: left;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #FF5252;
+}
+
+.wait-img{
+  width: 36%;
+  /* height: 50%; */
+}

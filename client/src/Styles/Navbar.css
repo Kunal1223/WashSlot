@@ -22,14 +22,14 @@
 .navlink{
     text-decoration: none;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 22px;
     color: #ffffff;
     text-decoration: none;
     padding: 4px 8px;
 }
 
 .navbar-links {
-    margin-right: 14%;
+    margin-right: 2%;
 }
 
 .navbar-links ul{
@@ -38,10 +38,9 @@
 
 .navlink1{
     margin-right: 12%;
-    margin-left: 16%;
     text-decoration: none;
-    color: rgb(91, 119, 244);
-    font-size: 16px;
+    color: rgb(46, 80, 234);
+    font-size: 20px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -53,7 +52,7 @@
 .navlink2{
     text-decoration: none;
     color: rgb(246, 52, 52);
-    font-size: 16px;
+    font-size: 20px;
     /* margin-right: 4px; */
     font-weight: 600;
     cursor: pointer;
@@ -90,7 +89,7 @@
 }
 
 .namechar{
-    margin: 0 8px;
+    margin: 0px 18px;
     color: #fff;
     font-size: 20px;
     border-radius: 50%;

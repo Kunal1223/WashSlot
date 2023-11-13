@@ -5,7 +5,7 @@ import { useAuth } from '../SubComponents/AuthenticateContext';
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const { namechar: contextNamechar } = useAuth();
+    const { namechar } = useAuth();
 
     const handleEvent = () => {
         localStorage.removeItem("authToken");
@@ -32,7 +32,7 @@ const Navbar = () => {
                                     <div className='logout-content'>
                                         <NavLink to={'/about'} className='navlink1'>About</NavLink>
                                         <NavLink onClick={handleEvent} className='navlink2'>Logout</NavLink>
-                                        <h1 className='namechar'>{contextNamechar}</h1>
+                                        <h1 className='namechar'>{namechar}</h1>
                                     </div>
                                 }
                             </div>
