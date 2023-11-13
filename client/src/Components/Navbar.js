@@ -7,9 +7,13 @@ const Navbar = () => {
     const navigate = useNavigate();
     const { namechar } = useAuth();
 
-    const handleEvent = () => {
+    const handleEvent = async(e) => {
+        e.preventDefault();
         localStorage.removeItem("authToken");
         localStorage.removeItem('namechar');
+        localStorage.removeItem('Uemail');
+        localStorage.removeItem('userinfor');
+        // await new Promise(resolve => setTimeout(resolve, 100));
         navigate('/login');
     }
 

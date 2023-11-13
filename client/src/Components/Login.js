@@ -4,10 +4,11 @@ import Loginani from '../assets/login.json';
 import Lottie from 'lottie-react';
 import '../Styles/Login.css'
 import { useAuth } from '../SubComponents/AuthenticateContext';
-
+ 
 const Login = () => {
   const navigate = useNavigate();
-  const { setAuthenticatedUser } = useAuth();
+  const { setAuthenticatedUser } = useAuth(); 
+  const {setAuthenticatEmail} = useAuth();
   const [Userinfo, setUserinfo] = useState({ email: "", password: "" });
 
   const handleonSubmit = async (e) => {
@@ -28,9 +29,8 @@ const Login = () => {
     else {
       localStorage.setItem('authToken', json.authToken);
       alert(json.message);
-      // console.log(json.namechar);
-      // const { namechar } = json;
       setAuthenticatedUser(json.namechar);
+      setAuthenticatEmail(json.email);
       navigate('/');
     }
   }

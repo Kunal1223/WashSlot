@@ -18,6 +18,8 @@ app.use('/api', require('./Route/ShambhaviBookingSlot'));
 app.use('/api', require('./Route/KaveryBoookingSlot'));
 app.use('/api', require('./Route/KumarDharaBookingSlot'));
 app.use('/api', require('./Route/NetravatyBookingSlot'));
+app.use('/api', require('./Route/AboutUser'));
+
 
 // File upload endpoint
 app.post("/uploadImage", (req, res) => {

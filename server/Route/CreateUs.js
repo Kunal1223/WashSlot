@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 
-router.post('/createuser',
+router.post('/createuser', 
     ([
         body('email', 'incorrect formate').isEmail(),
         body('name').isLength({ min: 5 }),
@@ -84,7 +84,7 @@ router.post('/loginuser',
             const namesend = userData.name.split(" ");
             nchar = (namesend[0].substring(0,1));
             const authToken = jwt.sign(data, KEY);
-            return res.json({ success: true, authToken: authToken, name: userData.name , message :"Login Successfully" , namechar:nchar });
+            return res.json({ success: true, authToken: authToken, email: userData.email , message :"Login Successfully" , namechar:nchar });
 
         } catch (err) {
             console.log(err);

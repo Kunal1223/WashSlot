@@ -5,7 +5,7 @@ const User = require('../Models/KaveryBooking');
 
 router.get('/kaveryColors', async (req, res) => {
     const { userId } = req.query;
-
+ 
     try {
         const bookings = await User.find({ userId });
         const slotColors = {};
