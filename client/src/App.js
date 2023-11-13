@@ -7,6 +7,7 @@ import About from './Components/About';
 import Hostel from './Components/Hostel';
 import Navbar from './Components/Navbar';
 import MachineBooking from './SubComponents/MachineBooking';
+import Signup from './Components/Signup';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
           <Route path='/hostel' element={<Hostel />} />
+          <Route path='/signup' element={<Signup />} />
 
           <Route path='/soupbooking' element={<MachineBooking userId1={"souparnikaM1"} userId2={"souparnikaM2"} colorapi={"souparnikaColors"} dataapi={"souparnikabookings"} />} />
 

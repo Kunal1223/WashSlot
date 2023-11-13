@@ -2,29 +2,47 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
 const express = require('express');
+const uploadImage = require('./Route/UploadImg');
 const cors = require('cors');
 const app = express();
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json({ limit: "25mb" }));
 
-app.use('/api' , require('./Route/CreateUs'))
+
+// API routes with versioning
+app.use('/api', require('./Route/CreateUs'));
 app.use('/api', require('./Route/SouparnikaBookingSlot'));
-app.use('/api' , require('./Route/NandiniBookingSlot'));
-app.use('/api' , require('./Route/ShambhaviBookingSlot'));
-app.use('/api' , require('./Route/KaveryBoookingSlot'));
-app.use('/api' , require('./Route/KumarDharaBookingSlot'));
-app.use('/api' , require('./Route/NetravatyBookingSlot'));
+app.use('/api', require('./Route/NandiniBookingSlot'));
+app.use('/api', require('./Route/ShambhaviBookingSlot'));
+app.use('/api', require('./Route/KaveryBoookingSlot'));
+app.use('/api', require('./Route/KumarDharaBookingSlot'));
+app.use('/api', require('./Route/NetravatyBookingSlot'));
 
-
-
-require('./DataBase/db');
-const PORT1 = process.env.PORT;
-
-app.get('/', (req, res) => {
-    res.send("This is the home page for me");
+// File upload endpoint
+app.post("/uploadImage", (req, res) => {
+  uploadImage(req.body.image)
+    .then((url) => res.send(url))
+    .catch((err) => res.status(500).send(err));
 });
 
-app.listen(PORT1, () => {
-    console.log(`Listening on ${PORT1}`);
+require('./DataBase/db');
+
+// Define port with a default value
+const PORT = process.env.PORT || 5000;
+
+// Home route
+app.get('/', (req, res) => {
+  res.send("This is the home page for me");
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
 });

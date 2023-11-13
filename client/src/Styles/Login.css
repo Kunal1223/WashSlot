@@ -1,0 +1,150 @@
+  .container1{
+    height: 100%;
+    width: 63%;
+    margin-top: 4%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 0px solid #f7f6f6;
+    background-color:#f7f6f6;
+  }
+  
+  .contain{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .heading{
+    margin-left: 70px;
+    margin-top: 60px;
+    color:#FF5252;
+    margin-bottom: 10px;
+  }
+  
+  .user{
+    margin-left: 30px;
+    margin-top: 30px;
+    padding: 5px 8px;
+    text-align: center;
+    align-items: center ;
+    width:240px;
+    height: 30px;
+    border-radius: 18px;
+    font-weight: 500;
+    border: 0px solid ;
+    background-color: #e8eaee;
+  }
+  
+  .forget{
+    display: flex;
+    color: rgb(14, 14, 14);
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    justify-content: space-around;
+    margin-right: 18%;
+  }
+
+  .animation{
+    width: 60%;
+    margin-bottom: 18px;
+  }
+  
+  .btn{ 
+    background-color:#f85e5e;
+    width:240px;
+    margin-top: 40px;
+    height: 30px;
+    margin-left: 30px;
+    border-radius: 18px;
+    border: 0px solid ;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 40px ;
+  }
+  
+  .btn:hover{
+    background-color:#FF5252;
+  }
+  
+  .right{
+    margin-top: 60px;
+    margin-right: 20px;
+  }
+  
+  .left{
+    margin-left: 20px;
+  }
+
+  .btn4{
+    margin-left: 20%;
+    background-color: #f85e5e;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 4px 8px;
+    color: white;
+    text-decoration: none;
+  }
+
+
+  /* ################################# signup ######################## */
+
+  .container2{
+    height: auto;
+    width: 700px;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 60px;
+    border: 0px solid #888888;
+    background-color:#f7f6f6;
+  }
+  
+  .heading1{
+    margin-left: 90px;
+    margin-top: 60px;
+    color:#FF5252;
+    margin-bottom: 10px;
+  }
+  
+  .right1{
+    margin-top: 100px;
+    margin-right: 20px;
+  }
+  
+  .logo3{
+    width: 350px;
+    height: 350px;
+    margin-left: 17px;
+  }
+  
+  .hr{
+    width: 260px;
+    height: 2px;
+    margin-top: 20px;
+    margin-left: 16px;
+  }
+  
+  .nav3{
+    color: red;
+    text-decoration: none;
+  }
+
+  .animation1{
+    width: 300px;
+  }
+
+  .image-section{
+    display: flex;
+  }
+
+  .hostel-id{
+    color: red;
+    font-size: 12px;
+    margin-left: 20%;
+  }
+
+  .loading{
+    width: 30px;
+    margin-left: 14%;
+    margin-top: 100%;
+  }

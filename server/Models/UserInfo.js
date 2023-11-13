@@ -15,12 +15,27 @@ const userSchema = new Schema({
     password :{
         type: String,
         required : true
+    }, 
+
+    room :{
+        type: Number,
+        required : true
+    },
+
+    hostel :{
+        type : String ,
+        require :true
     },
 
     phone :{
         type : Number,
         required:true
-    }
+    },
+    imageUrl: {
+        type:String,
+        required:true,
+        default:"" 
+    },
 })
 
 module.exports = mongoose.model("userinform" , userSchema); 

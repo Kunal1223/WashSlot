@@ -24,9 +24,9 @@ router.post('/createuser',
 
         const email = req.body.email;
 
-        const check = await User.findOne({ email });
+        const check = await User.findOne({ email }); 
 
-        if (check) {
+        if (check) { 
             return res.status(400).json({ success:false ,message :"Email is already resister"})
         } else {
             try {
@@ -34,7 +34,10 @@ router.post('/createuser',
                     name: req.body.name,
                     email: req.body.email,
                     password: cpassword,
+                    room : req.body.room,
+                    hostel : req.body.hostel,
                     phone: req.body.phone,
+                    imageUrl:req.body.url
                 });
                 res.json({ success: true  , message :"Resister Successfully"});
             } catch (err) {
@@ -55,20 +58,19 @@ router.post('/loginuser',
     async (req, res) => {
         const error = validationResult(req);
         if (!error.isEmpty()) {
-            return res.status(400).json({ error: error.array() })
+            return res.status(400).json({ success:false , message :"Please Fill all the details in Standard Manner" })
         }
         const email = req.body.email;
         try {
             const userData = await User.findOne({ email });
             if (!userData) {
-                res.json({ success: false, message: "Please enter valid data" });
-                return;
+                return res.json({ success: false, message: "Please enter valid data" });
             }
 
             const compassword = await bcrypt.compare(req.body.password, userData.password);
             if (!compassword) {
-                res.json({ success: false, message: "Please enter valid data" });
-                return;
+                return res.json({ success: false, message: "Please enter valid data" });
+                
             }
 
             // ********** i am tring to pass username directly using a props***********
@@ -80,7 +82,7 @@ router.post('/loginuser',
             }
 
             const authToken = jwt.sign(data, KEY);
-            return res.json({ success: true, authToken: authToken, name: userData.name });
+            return res.json({ success: true, authToken: authToken, name: userData.name , message :"Login Successfully" });
 
         } catch (err) {
             console.log(err);
