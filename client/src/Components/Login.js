@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Loginani from '../assets/login.json';
 import Lottie from 'lottie-react';
-import '../Styles/Login.css'
+import '../Styles/Login.css' 
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,13 +21,14 @@ const Login = () => {
     const json = await response.json();
 
     if (!json.success) {
-      alert("Invalid Enter value");
+      alert(json.message);
     }
     else {
       localStorage.setItem('authToken', json.authToken);
-      alert("You are login Successfully😎");
-      const { name } = json;
-      navigate('/', { state: { name } });
+      alert(json.message);
+      // console.log(json.namechar);
+      const { namechar } = json;
+      navigate('/', { state: { namechar } });
     }
   }
 

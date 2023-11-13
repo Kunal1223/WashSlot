@@ -81,8 +81,10 @@ router.post('/loginuser',
                 }
             }
 
+            const namesend = userData.name.split(" ");
+            nchar = (namesend[0].substring(0,1));
             const authToken = jwt.sign(data, KEY);
-            return res.json({ success: true, authToken: authToken, name: userData.name , message :"Login Successfully" });
+            return res.json({ success: true, authToken: authToken, name: userData.name , message :"Login Successfully" , namechar:nchar });
 
         } catch (err) {
             console.log(err);

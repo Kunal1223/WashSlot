@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 
 import Home from './Components/Home';
 import Login from './Components/Login';
@@ -10,6 +10,7 @@ import MachineBooking from './SubComponents/MachineBooking';
 import Signup from './Components/Signup';
 
 function App() {
+
   return (
     <>
       <BrowserRouter>
@@ -34,7 +35,7 @@ function App() {
           <Route path='/netravaty' element={<MachineBooking userId1={"netravatyM1"} userId2={"netravatyM2"} colorapi={"netravatyColors"} dataapi={"netravatybookings"} />} />
 
         </Routes>
-        {/* <Footer /> */} 
+        {/* <Footer /> */}
       </BrowserRouter>
 
     </>

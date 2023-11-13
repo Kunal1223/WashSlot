@@ -22,7 +22,7 @@ app.use('/api', require('./Route/NetravatyBookingSlot'));
 // File upload endpoint
 app.post("/uploadImage", (req, res) => {
   uploadImage(req.body.image)
-    .then((url) => res.send(url))
+    .then((url) => res.send(url)) 
     .catch((err) => res.status(500).send(err));
 });
 
