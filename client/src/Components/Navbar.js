@@ -1,15 +1,15 @@
 import React from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import '../Styles/Navbar.css';
+import { useAuth } from '../SubComponents/AuthenticateContext';
 
 const Navbar = () => {
-    // console.log(namechar)
     const navigate = useNavigate();
-    const location = useLocation();
-    const namechar = location.state && location.state.namechar;
+    const { namechar: contextNamechar } = useAuth();
 
     const handleEvent = () => {
         localStorage.removeItem("authToken");
+        localStorage.removeItem('namechar');
         navigate('/login');
     }
 
@@ -18,12 +18,11 @@ const Navbar = () => {
             <div className="navbar-container">
                 <div className="nav-container">
                     <div className="logo">
-                        <NavLink to={'/' } className='navlink'>WashSlot</NavLink>
+                        <NavLink to={'/'} className='navlink'>WashSlot</NavLink>
                     </div>
                     <div className="navbar-links">
                         <ul>
-                            <NavLink to={'/' } className='navlink1'>Home</NavLink>
-                            <NavLink to={'/about'} className='navlink1'>About</NavLink>
+                            <NavLink to={'/'} className='navlink1'>Home</NavLink>
                             <div className="signup">
                                 {(!localStorage.getItem("authToken")) ?
                                     <>
@@ -31,8 +30,9 @@ const Navbar = () => {
                                     </>
                                     :
                                     <div className='logout-content'>
+                                        <NavLink to={'/about'} className='navlink1'>About</NavLink>
                                         <NavLink onClick={handleEvent} className='navlink2'>Logout</NavLink>
-                                        <h1 className='namechar'>{namechar}</h1>
+                                        <h1 className='namechar'>{contextNamechar}</h1>
                                     </div>
                                 }
                             </div>

@@ -29,7 +29,7 @@
 }
 
 .navbar-links {
-    margin-right: 4%;
+    margin-right: 14%;
 }
 
 .navbar-links ul{
@@ -37,7 +37,8 @@
 }
 
 .navlink1{
-    margin-right: 14%;
+    margin-right: 12%;
+    margin-left: 16%;
     text-decoration: none;
     color: rgb(91, 119, 244);
     font-size: 16px;
@@ -53,6 +54,7 @@
     text-decoration: none;
     color: rgb(246, 52, 52);
     font-size: 16px;
+    /* margin-right: 4px; */
     font-weight: 600;
     cursor: pointer;
 }
@@ -83,17 +85,18 @@
     background-color: rgb(0, 47, 255);
 }
 
+.logout-content{
+    display: flex;
+}
+
 .namechar{
-    margin: 0 18px;
+    margin: 0 8px;
     color: #fff;
     font-size: 20px;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    padding: 2px 4px;
+    padding: 2px 8px 0px 8px;
     background-color: rgb(4, 24, 248);
 }
 
-.logout-content{
-    display: flex;
-}
