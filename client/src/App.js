@@ -11,12 +11,12 @@ import Signup from './Components/Signup';
 import Footer from './Components/Footer';
 
 function App() {
-
+ 
   return (
     <>
       <BrowserRouter>
         <Navbar />
-        <Routes>
+         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
