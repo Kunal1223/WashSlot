@@ -1,8 +1,14 @@
 import React from 'react'
+import '../Styles/Footer.css'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <>
+      <div className="footer-container">
+        <p className="copyright">Copyright &copy;washslot</p>
+        
+      </div>
+    </>
   )
 }
 

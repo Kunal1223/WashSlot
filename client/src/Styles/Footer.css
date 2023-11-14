@@ -1,0 +1,17 @@
+.footer-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #dbd8d8;
+    color: white; 
+    text-align: center;
+    padding: 10px;
+    margin-top: 70px;
+  }
+
+  .footer-container p{
+    color: rgb(116, 115, 115);
+    font-weight: 600;
+  }
+  
