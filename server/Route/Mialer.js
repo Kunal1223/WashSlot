@@ -6,6 +6,7 @@ const nodemailer = require("nodemailer");
 router.post('/sendmail', async (req, res) => {
     const email = req.body.email;
     const time = req.body.time;
+    const machine = req.body.machine
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -19,7 +20,7 @@ router.post('/sendmail', async (req, res) => {
         from: "donfunky595@gmail.com",
         to: email,
         subject: "Slot Booking Confirmation",
-        text: `Congrats you successfully book a slot of ${time}`
+        text: `Dear user, your slot for ${time} on Machine ${machine} has been successfully booked. Thank you!`
     };
 
     transporter.sendMail(mailOptions, function (error, info) {

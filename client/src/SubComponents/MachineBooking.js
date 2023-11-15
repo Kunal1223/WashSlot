@@ -60,7 +60,7 @@ const MachineBooking = ({ userId1, userId2, colorapi, dataapi }) => {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ time: slotTime, email: Uemail }),
+            body: JSON.stringify({ time: slotTime, email: Uemail , machine : userId1}),
           })
             .then((response) => response.json())
             .then((data) => {
@@ -101,7 +101,7 @@ const MachineBooking = ({ userId1, userId2, colorapi, dataapi }) => {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ time: slotTime, email: Uemail }),
+            body: JSON.stringify({ time: slotTime, email: Uemail , machine : userIdM2}),
           })
             .then((response) => response.json())
             .then((data) => {
