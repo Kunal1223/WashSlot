@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../Styles/About.css';
+import '../Styles/About.css'; 
 import { useAuth } from '../SubComponents/AuthenticateContext';
 
 const About = () => {

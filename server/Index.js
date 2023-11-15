@@ -19,6 +19,8 @@ app.use('/api', require('./Route/KaveryBoookingSlot'));
 app.use('/api', require('./Route/KumarDharaBookingSlot'));
 app.use('/api', require('./Route/NetravatyBookingSlot'));
 app.use('/api', require('./Route/AboutUser'));
+app.use('/api', require('./Route/Mialer'));
+
 
 
 // File upload endpoint

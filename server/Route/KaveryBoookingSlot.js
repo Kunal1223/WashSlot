@@ -38,7 +38,7 @@ router.post('/kaverybookings', async (req, res) => {
                 return res.status(409).json({ message: 'Slot already booked' });
             }
 
-            booking.isBooked = true;
+            booking.isBooked = true; 
             booking.userId = userId;
             booking.color = 'red'; 
             await booking.save();
