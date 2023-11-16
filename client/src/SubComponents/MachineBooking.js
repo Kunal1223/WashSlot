@@ -100,7 +100,7 @@ const MachineBooking = ({ userId1, userId2, colorapi, dataapi }) => {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-            },
+            }, 
             body: JSON.stringify({ time: slotTime, email: Uemail , machine : userIdM2}),
           })
             .then((response) => response.json())
