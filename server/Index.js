@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json({ limit: "25mb" }));
 
 
-// API routes with versioning
+// API routes for th all different hostels and the for taking the colors and update the slot
 app.use('/api', require('./Route/CreateUs'));
 app.use('/api', require('./Route/SouparnikaBookingSlot'));
 app.use('/api', require('./Route/NandiniBookingSlot'));
