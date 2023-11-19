@@ -31,6 +31,7 @@ const Hostel = () => {
               <hr className="home-hr1" />
             </div>
 
+            {/* call the all different hostel with passing the props */}
             <div className="hostelcart">
               <NavLink to={'/soupbooking'} className='hostelcart-navlink'>
                 <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Souparnika"} cartdicrp={"First year hostel"} /></NavLink>
@@ -42,6 +43,7 @@ const Hostel = () => {
                 <HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Shambhavi"} cartdicrp={"2nd Boy's Senior hostel"} /></NavLink>
             </div>
 
+            {/* call the all different hostel with passing the props */}
             <div className="hostelcart1">
               <NavLink to={'/kavery'} className='hostelcart-navlink'><HostelCart cartimg={'./images/hostelpic.jpg'} cartname={"Kavery"} cartdicrp={"Closest from Mess ( Boy's Hostel )"} /> </NavLink>
 
